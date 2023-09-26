@@ -1,0 +1,254 @@
+*{
+  box-sizing:border-box;
+}
+#scene {
+  position: relative;
+  width: 1100px;
+  height: 650px;
+  border: 5px dotted rgb(34, 160, 122);
+  margin: 20px auto;
+}
+
+#scene.grass{
+  background-image: url(/img/map/grass.png);
+}
+
+.brick{
+ position: absolute;
+ background-image: url(/img/map/brick.png);
+ height: 50px;
+ width: 50px;
+ background-size:100%;
+}
+
+.rock{
+  position: absolute;
+  background-image: url(/img/map/rock.png);
+  height: 50px;
+  width: 50px;
+  background-size:100%;
+ }
+
+#top-panel{
+  position:absolute;
+  top:0;
+  left:0px;
+  right:0;
+  height: 80px;
+  display:flex;
+  opacity: 0;
+  transform:translateY(-100%);
+  transition:0.7s 1s; 
+}
+#top-panel:hover{
+transform: translateY(0%);
+opacity: 1;
+transition:0.3s;
+}
+.timer{
+  font-size: 25px;
+  text-align:center;
+}
+.player-field{
+ width: 450px; 
+ /* background-color:#19e345; */
+ padding: 10px;
+}
+
+.player-field.enemy{
+display: flex;
+justify-content: flex-end;
+}
+
+.player-name{
+height: 90px;
+width: 225px;
+display:flex;
+justify-content:center;
+align-items: flex-end;
+background-image: url(/img/team_hamster.svg);
+background-size: 75%;
+background-repeat: no-repeat;
+font-size: 20px;
+padding-bottom: 35px;
+}
+.enemy .player-name{
+  background-image: url(/img/team_rose.svg);
+}
+.center-field{
+  flex:1;
+ text-align: center;
+ font-size: 35px;
+ font-weight: bold;
+ padding-top: 20px;
+}
+
+#play-pause-btn{
+  position:absolute;
+  left:10px;
+  bottom:10px;
+
+}
+.overlay{
+  position:fixed;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  background:rgba(86, 247, 206, 0.4);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: 0.3s;
+z-index: 1000;
+}
+
+.overlay.hidden{
+opacity: 0;
+
+
+}
+
+.modal{
+  width: 480px;
+  height:430px;
+  background:#D3BA79;
+  border-radius: 10px;
+  
+}
+
+.start-game-modal{
+  height: 100%;
+  position:relative;
+  padding: 20px;
+}
+
+.start-game-modal.hidden{
+  display:none;
+}
+
+
+.vine{
+  max-height: 100%;
+  position:absolute;
+  top:0;
+}
+
+.vine_small{
+left:0;
+transform:scale(0.7) translate(-46%,29%)
+
+}
+
+.vine_big{
+right:0;
+transform:scale(1) translate(22%,1%)
+}
+
+
+.game-over-modal{
+  height: 100%;
+  position:relative;
+  padding: 20px;
+}
+
+.game-over-modal.hidden{
+  display:none;
+}
+
+.winner{
+  height: 200px;
+  display:flex;
+  justify-content: center;
+}
+
+.winner-animal svg, .winner-plant svg{
+  height:100%;
+  
+
+} 
+.winner .crown{
+  display:none;
+}
+
+.with-crown .crown{
+display: block;
+}
+#inventory{
+position:absolute;
+left:20px;
+bottom:40px;
+
+}
+.seeds{
+  height:30px;
+}
+.seeds img{
+  height:100%;
+}
+.d-flex{
+  display:flex;
+  flex-wrap:wrap;
+}
+#shop{
+  position:absolute;
+  right: 10px;
+  bottom:10px;
+  width:300px;
+}
+.good{
+  width:33%;
+border: 3px solid gold;
+border-radius: 6px;
+padding: 6px;
+position: relative;
+}
+.good .title{
+  height: 35px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.good .seeds{
+position: absolute;
+bottom: 10px;
+}
+.good img{
+  width:100%;
+}
+/* .armor{
+  height: 55px;
+  opacity:0;
+}
+
+.armor img{
+  height:100%;
+  
+} */
+.actionsMenu{
+  position:absolute;
+  left:200px;
+  top:200px;
+}
+.actionsMenu .item{
+  background-color:#FFE37E;
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform-origin: center 80px;
+
+}
+
+.renderButton {
+position: absolute;
+right: 10px;
+bottom: 10px;
+background-color: rgb(255, 0, 0);
+}

@@ -1,4 +1,7 @@
+"use client"
+import Link from 'next/link'
 import '../css/style.css'
+import '../css/scene.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,7 +11,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+      </head>
+      <body>
+        <div style={{ gap: "12px", display: "flex" }}>
+          <Link href="/">Home</Link>
+          <Link href="/game">Game</Link>
+          <Link href="/svg">Svg</Link>
+          <Link href="/contacts">Contacts</Link>
+          <Link href="/shop">Shop</Link>
+          <Link href="/chat">Chat</Link>
+        </div>
+        {children}
+
+      </body>
     </html>
   )
 }

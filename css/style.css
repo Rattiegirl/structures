@@ -31,3 +31,62 @@
   font-size: 14px;
   text-transform: capitalize;
 }
+
+.project-card{
+  width: 300px;
+  border: 5px dashed darkblue;
+  border-radius: 25px;
+  padding: 10px;
+  
+}
+
+.project-cards{
+  display : flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.quail-card{
+  width: 300px;
+  border: 5px solid rgb(223, 202, 13);
+  border-radius: 25px;
+  padding: 10px;
+  
+}
+
+.quail-cards{
+  display : flex;
+  flex-direction: row;
+  gap: 20px;
+  
+}
+
+.text-red{
+color: red;
+}
+
+.text-green{
+color: green;
+}
+
+.like-plus{
+color: rgb(43, 255, 0);
+}
+
+.like-minus{
+color: rgb(225, 12, 12);
+}
+
+.like-plus, .like-minus{
+  cursor: pointer;
+  padding: 5px;
+  border: 2px solid rgb(255, 221, 0);
+  border-radius: 3px;
+  margin: 5px;
+  user-select: none;
+}
+
+.bookmark{
+  cursor: pointer;
+  user-select: none;
+}
