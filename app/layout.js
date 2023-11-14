@@ -1,7 +1,8 @@
 "use client"
 import Link from 'next/link'
-import '../css/style.css'
-import '../css/scene.css'
+import '../scss/style.scss'
+
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -22,6 +23,9 @@ export default function RootLayout({ children }) {
           <Link href="/contacts">Contacts</Link>
           <Link href="/shop">Shop</Link>
           <Link href="/chat">Chat</Link>
+          <Link href="/team">Team</Link>
+          <Link href="/creature_chat">Creature Chat</Link>
+          <Link href="/lobby">Lobby</Link>
         </div>
         {children}
 

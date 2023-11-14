@@ -1,3 +1,11 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './scene.scss';
+@import './chat.scss';
+@import './teams.scss';
 .app {
   font-family: sans-serif;
   text-align: center;
